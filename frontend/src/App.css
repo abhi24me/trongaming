@@ -465,3 +465,640 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+/* BOOKING FORM */
+.booking-page, .wallet-page, .bookings-page, .admin-page {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.booking-container, .wallet-container, .bookings-container, .admin-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.booking-header, .wallet-header, .bookings-header, .admin-header {
+  margin-bottom: 3rem;
+}
+
+.back-button {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-button:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.booking-title, .wallet-title, .bookings-title, .admin-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-card {
+  background: rgba(21, 21, 32, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+}
+
+.form-card-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.setup-selector, .payment-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.setup-option, .payment-option {
+  flex: 1;
+  padding: 1.5rem;
+  background: rgba(21, 21, 32, 0.5);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.setup-option:hover, .payment-option:hover {
+  border-color: var(--primary);
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.setup-option.active, .payment-option.active {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 153, 255, 0.2));
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.payment-balance {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.price-card {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 153, 255, 0.1));
+  border-color: var(--primary);
+}
+
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.price-item.total {
+  border-bottom: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  padding-top: 1rem;
+  border-top: 2px solid var(--primary);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+}
+
+.submit-button:hover:not(:disabled) {
+  box-shadow: 0 15px 50px rgba(0, 255, 136, 0.5);
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* WALLET */
+.balance-card {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 153, 255, 0.2));
+  padding: 3rem;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 50px rgba(0, 255, 136, 0.3);
+}
+
+.balance-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance-label {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.balance-amount {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.topup-card, .transactions-card {
+  background: rgba(21, 21, 32, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.topup-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.topup-option {
+  padding: 2rem 1rem;
+  background: rgba(21, 21, 32, 0.5);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topup-option:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: rgba(0, 255, 136, 0.1);
+  transform: translateY(-5px);
+}
+
+.topup-option.featured {
+  border-color: var(--primary);
+}
+
+.topup-amount {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.topup-bonus {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.custom-topup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.topup-input {
+  flex: 1;
+  padding: 1rem;
+  background: rgba(21, 21, 32, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-primary);
+}
+
+.topup-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--dark-bg);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bonus-info {
+  padding: 1rem;
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+}
+
+.bonus-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.transactions-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(21, 21, 32, 0.5);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.transaction-type {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.transaction-date {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.transaction-amount {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.transaction-amount.positive {
+  color: var(--primary);
+}
+
+.transaction-amount.negative {
+  color: #ff6b6b;
+}
+
+.bonus-tag {
+  font-size: 0.8rem;
+  color: var(--secondary);
+}
+
+/* BOOKINGS */
+.no-bookings {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: rgba(21, 21, 32, 0.9);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.no-bookings h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin: 1rem 0;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.booking-card {
+  background: rgba(21, 21, 32, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.booking-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+  transform: translateY(-5px);
+}
+
+.booking-card.upcoming {
+  border-color: var(--primary);
+}
+
+.booking-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.upcoming {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--dark-bg);
+}
+
+.status-badge.past {
+  background: rgba(160, 160, 176, 0.2);
+  color: var(--text-secondary);
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.booking-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.booking-meta {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  background: rgba(21, 21, 32, 0.5);
+  border-radius: 10px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meta-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.meta-value {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.booking-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(0, 255, 136, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.price-total {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.booking-id {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ADMIN */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: rgba(21, 21, 32, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+  transform: translateY(-5px);
+}
+
+.stat-card.highlight {
+  border-color: var(--primary);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 12px;
+  color: var(--dark-bg);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.bookings-table-card {
+  background: rgba(21, 21, 32, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.table-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+.date-filter {
+  padding: 0.8rem 1rem;
+  background: rgba(21, 21, 32, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-table th {
+  text-align: left;
+  padding: 1rem;
+  background: rgba(21, 21, 32, 0.5);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.bookings-table td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bookings-table tr:hover {
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.amount {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.payment-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.payment-badge.wallet {
+  background: rgba(0, 255, 136, 0.2);
+  color: var(--primary);
+}
+
+.payment-badge.mock {
+  background: rgba(0, 153, 255, 0.2);
+  color: var(--secondary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .form-grid, .wallet-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .topup-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-meta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .dashboard-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .table-container {
+    overflow-x: scroll;
+  }
+}
